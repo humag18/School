@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+declare interne="Programmation"
+echo $interne
