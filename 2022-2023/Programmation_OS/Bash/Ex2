@@ -4,8 +4,10 @@ declare interne="Programmation"
 echo $interne
 
 declare -x publique="Bash"
-echo $publique
 
-if [[ $publique==" " ]];then
+if [[ -z "$publique" ]];then
+    echo "empty variable"
+else
+    echo $publique
     
 fi
