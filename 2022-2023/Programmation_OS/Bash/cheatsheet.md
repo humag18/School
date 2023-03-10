@@ -15,7 +15,11 @@ Quand il y a une manipulation de variable ne pas oublier le `$` expl :
 Suivant la structure : 
 
 `if [[<condition>]]; then
+    
     ....
+
 echo
+    
     ....
+
 fi` 
