@@ -23,7 +23,8 @@ if [[<condition>]]; then
 echo
     echo "exemple"
 
-fi```
+fi
+```
 
 Pour verifier si une variable est vide mettre en condition 
 
