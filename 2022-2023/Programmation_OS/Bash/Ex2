@@ -2,3 +2,10 @@
 
 declare interne="Programmation"
 echo $interne
+
+declare -x publique="Bash"
+echo $publique
+
+if [[ $publique==" " ]];then
+    
+fi
