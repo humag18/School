@@ -3,11 +3,13 @@
 declare interne="Programmation"
 echo $interne
 
-declare -x publique="Bash"
-
-if [[ -z "$publique" ]];then
-    echo "empty variable"
-else
-    echo $publique
+if [[ -n "$publique" ]]; then
+    if [[ -z "$publique" ]];then
+        echo "empty variable" >&2
+    else
+        echo $publique
     
-fi
+    fi
+else
+    echo "La variable n'existe pas!" 2>&1
+fi 

@@ -3,7 +3,7 @@
 ## Variable
 Création d'une variable :
 
-``` 
+```Bash 
 declare name_of_variable="content_of_variable"
 ```
 
@@ -16,7 +16,7 @@ Quand il y a une manipulation de variable ne pas oublier le `$` expl :
 
 Suivant la structure : 
 
-```
+```Bash
 if [[<condition>]]; then 
     echo "test"
 
@@ -29,5 +29,5 @@ fi
 Pour verifier si une variable est vide mettre en condition 
 
 ```Bash
--z "$variable"
+if [[-z "$variable"]];
 ``` 
