@@ -10,6 +10,12 @@ if [[ -n "$publique" ]]; then
         echo $publique
     
     fi
+        echo $interne$publique
+
+        interne="Programmation des systèmes" 
+        publique="1000\$ de bash svp"
+        echo $interne$publique
 else
-    echo "La variable n'existe pas!" 2>&1
-fi 
+    echo "La variable n'existe pas!" >&2
+fi
+
