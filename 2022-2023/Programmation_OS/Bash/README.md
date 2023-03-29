@@ -52,3 +52,6 @@ declare test="j'ai 300\$ sur moi"
 
 ```
 
+## Gestion des paramètres
+
+exemple de paramètre `./EX1.sh` 
