@@ -52,6 +52,37 @@ declare test="j'ai 300\$ sur moi"
 
 ```
 
+## Les boucles
+
+Il existe 2 types de boucles en Bash
+
+La boucle `while` :
+
+```Bash
+i=1
+while [[$i -le 5]];
+do 
+    echo "bonjour"
+done
+
+```
+
+>Ce bout de code affiche 5 fois bonjour
+
+La boucle `for` :
+
+```Bash
+fot i in {1..5}
+do 
+    echo $i
+done
+
+```
+
+>Ce bout de code affiche les chiffres allant de 1 à 5 
+
 ## Gestion des paramètres
 
-exemple de paramètre `./EX1.sh` 
+exemple de paramètre `./EX1.sh hugo` 
+>ici nous avons donc 1 paramètres (hugo)
+

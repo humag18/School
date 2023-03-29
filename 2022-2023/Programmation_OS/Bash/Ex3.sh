@@ -2,9 +2,10 @@
 
 echo "Le nombre de variable passé en paramètres est : $#"
 
-declare i = 1
+declare i=1
 
 while [[ $i -le $# ]]; do
-    echo "paramètre n°$i : $"
+    echo "paramètre n°$i : ${!i}"
+    ((i++))
     
 done
