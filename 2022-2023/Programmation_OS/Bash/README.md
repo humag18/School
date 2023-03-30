@@ -101,6 +101,25 @@ echo $1
 
 >/!\ ici ce n'est pas comme dans la pluspart des langages, $1 est le premier paramètre et non le second 
 
+## Les opérateurs
+
+Dans l'ensemble cela reste la même chose que dans tous les langage 
+pour les opératuers de bases
+- `+` : Addition
+- `-` : Soustraction 
+- `*` : Multiplication
+- `/` : Division
+- `%` : Modulo 
+- `=` : Affectation ed valeur
+- `==` : Vérification d'égalité (pour les char)
+- `!=` : Vérification de non égalité (pour les char)
+- `-eq` : Test d'égalité numérique
+- `-ne` : Test de non égalité numérique
+- `-gt` : Supérieur à
+- `-lt` : Inférieur à
+- `-ge` : supérieur ou égal 
+- `-le` : inférieur ou égal 
+
 ## Les listes
 
 Ici ce n'est pas comme dans la pluspart des langages, $1 est le premier paramètre et non le second 
