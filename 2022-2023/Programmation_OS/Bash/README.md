@@ -19,8 +19,7 @@ Suivant la structure :
 ```Bash
 if [[<condition>]]; then 
     echo "test"
-
-echo
+else
     echo "exemple"
 
 fi
@@ -83,6 +82,40 @@ done
 
 ## Gestion des paramètres
 
-exemple de paramètre `./EX1.sh hugo` 
+Exemple de paramètre `./EX1.sh hugo` 
+
 >ici nous avons donc 1 paramètres (hugo)
 
+Pour afficher le nombre de variables passée en paramètres 
+
+```Bash
+echo $#
+```
+
+l'affichage des paramètre se fait grace à : 
+
+```Bash
+echo $1
+
+```
+
+>/!\ ici ce n'est pas comme dans la pluspart des langages, $1 est le premier paramètre et non le second 
+
+## Les listes
+
+Ici ce n'est pas comme dans la pluspart des langages, $1 est le premier paramètre et non le second 
+
+L'initialisation d'une liste vide se fait : 
+```Bash
+declare liste=()
+
+```
+
+Les séparateur sont de simple `,`
+
+Pour ajouter un élément à une liste : 
+
+```Bash
+liste+=("premier element")
+
+```
