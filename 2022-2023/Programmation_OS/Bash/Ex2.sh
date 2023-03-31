@@ -3,7 +3,7 @@
 declare interne="Programmation"
 echo $interne
 
-if [[ -n "$publique" ]]; then
+if[[ -n "$publique" ]]; then
     if [[ -z "$publique" ]];then
         echo "empty variable" >&2
     else
