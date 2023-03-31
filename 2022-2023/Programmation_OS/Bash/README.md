@@ -55,7 +55,7 @@ declare test="j'ai 300\$ sur moi"
 
 Il existe 2 types de boucles en Bash
 
-La boucle `while` :
+### La boucle `while`
 
 ```Bash
 i=1
@@ -67,8 +67,9 @@ done
 ```
 
 >Ce bout de code affiche 5 fois bonjour
+>Généralement utiliser lorsqu'on connait les conditions pour sortir de la boucle
 
-La boucle `for` :
+### La boucle `for`
 
 ```Bash
 fot i in {1..5}
@@ -79,6 +80,17 @@ done
 ```
 
 >Ce bout de code affiche les chiffres allant de 1 à 5 
+
+### La boucle until
+```Bash
+until [$i -ge 5 ]
+do 
+    echo $i
+    i=$((i+1))
+done
+
+```
+>Généralement utilisée lorsque l'on connait la condition pour rentrer dans la boucle
 
 ## Gestion des paramètres
 
