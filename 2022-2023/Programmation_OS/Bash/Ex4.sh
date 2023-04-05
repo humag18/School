@@ -9,6 +9,7 @@ do
     do  
         if [[ ${!i}==$id ]]; 
         then
+
             echo "Votre paramètre ${!i} est présent dans dans la liste des UID"
         else
             echo "Votre paramètre ${!i} n'est pas présent dans la liste des UID"
