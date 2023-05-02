@@ -9,8 +9,14 @@ declare name_of_variable="content_of_variable"
 
 Quand il y a une manipulation de variable ne pas oublier le `$` expl : 
 
-`echo $variable`
+```Bash
+echo "$Variable1"
+```
 
+Il n'y a pas de types de variables (int, float, char, ...) n'existent passer
+
+>Les listes n'existent pas non plus mais il y a moyen d'en simulé avec un remplacement des espaces par des \n
+>/!\ATTENTION/!\ le premier élément d'une variable et le n°1 et non n°0 
 ## Structure conditionnelle
 `if` comme dans tous les languages
 
@@ -132,21 +138,3 @@ pour les opératuers de bases
 - `-ge` : supérieur ou égal 
 - `-le` : inférieur ou égal 
 
-## Les listes
-
-Ici ce n'est pas comme dans la pluspart des langages, $1 est le premier paramètre et non le second 
-
-L'initialisation d'une liste vide se fait : 
-```Bash
-declare liste=()
-
-```
-
-Les séparateur sont de simple `,`
-
-Pour ajouter un élément à une liste : 
-
-```Bash
-liste+=("premier element")
-
-```
