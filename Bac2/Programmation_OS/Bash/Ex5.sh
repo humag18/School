@@ -10,7 +10,7 @@ declare file_name="./passwd.txt"
 if ! [[ -f "$file_name" ]]; then
     echo "$file_name doesn't exist !"
     exit 1
-fi 
+fi
 # recherche grace au grep du prochain UID disponible
 for ((i = 0; i < 65535; i++)); do 
     if ! grep -qE "x:${i}:" "$file_name"; then
