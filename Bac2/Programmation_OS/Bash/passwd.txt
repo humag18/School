@@ -51,4 +51,4 @@ dhcp:x:951:951:DHCP daemon:/:/usr/bin/nologin
 gitlab-runner:x:107:107:GitLab Runner:/var/lib/gitlab-runner:/usr/bin/nologin
 rpcuser:x:34:34:RPC Service User:/var/lib/nfs:/usr/bin/nologin
 pcpqa:x:950:950:PCP Quality Assurance:/var/lib/pcp/testsuite:/bin/bash
-
+pcpqa:x:999:999:PCP Quality Assurance:/var/lib/pcp/testsuite:/bin/bash

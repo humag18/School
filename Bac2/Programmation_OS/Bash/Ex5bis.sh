@@ -1,14 +1,16 @@
 #!/bin/bash
 
 
-while getopts "m:M:" option ; do
+while getopts "m:M:u" option ; do
     case "${option}" in
         m) 
             declare uid_min=${OPTARG}
         ;;
         M)
-            echo "${OPTARG}"
             declare uid_max=${OPTARG}
+        ;;
+        u)
+            declare uid_max=1000
         ;;
         *) 
             echo "Option invalide" >&2

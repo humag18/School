@@ -129,6 +129,28 @@ on peu aproximativement passer tout en paramètres nom de fichier, int, char (po
 
 >/!\ ici ce n'est pas comme dans la pluspart des langages, $1 est le premier paramètre et non le second 
 
+## Les options
+
+```Bash
+#!/bin/bash
+
+while getopts "$options" option; do 
+    case "$option" in
+    option1)
+        Action 
+    option2) 
+        Action
+    *)
+        exit 1
+    esac 
+done
+
+```
+
+$options = les différentes option valide h, m, ...
+>Pour les différentes options mettre `:` après signifie qu'elle nécessite un argument `declare options="m:l"` ici l'option `m` nécessite des arguments l'option `l` quand a elle n'en nécessite pas 
+>`*` signifie tous les autres carractères
+
 ## Les opérateurs
 
 Dans l'ensemble cela reste la même chose que dans tous les langage 
@@ -165,3 +187,5 @@ fi
 ```
 > Ici le fichier test.txt devrait se trouver dans le même  dossier que notre programme 
 
+
+## Les options
