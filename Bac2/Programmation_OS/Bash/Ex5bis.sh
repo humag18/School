@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-while getopts "m:M:u" option ; do
+while getopts "m:M:uhn:" option ; do
     case "${option}" in
         m) 
             declare uid_min=${OPTARG}
@@ -11,6 +11,17 @@ while getopts "m:M:u" option ; do
         ;;
         u)
             declare uid_max=1000
+        ;;
+        h)
+            echo "Voici les différentes options possible lors de l'exécution de ce programme: 
+            -m <nbr>: établit un uid minimum 
+            -M <nbr>: établit un uid maximum 
+            -u: ne peut afficher que les uid pour utilisateur normaux
+            -n <nb_id>: permet d'afficher <nb_id> de uids"
+            exit 0
+        ;;
+        n)
+            declare nb_id=${OPTARG}
         ;;
         *) 
             echo "Option invalide" >&2
@@ -26,6 +37,9 @@ fi
 if [[ -z "$uid_max" ]]; then
     uid_max=65535
 fi
+if [[ -z "$nb_id" ]]; then
+    nb_id=1
+fi
 
 declare file_name="./passwd.txt"
 if ! [[ -f "$file_name" ]]; then
@@ -34,8 +48,9 @@ if ! [[ -f "$file_name" ]]; then
 fi
 
 for ((i = "$uid_min"; i < "$uid_max"; i++)); do
-   if ! grep -qE "x:${i}:" "$file_name"; then
-       echo "Next UID $i"
-       exit 0
-   fi 
+   for ((i = 0; i < "$nb_id"; i++)); do 
+        if ! grep -qE "x:${i}:" "$file_name"; then
+            echo "Next UID $i"
+        fi 
+    done
 done

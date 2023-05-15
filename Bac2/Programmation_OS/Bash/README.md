@@ -3,13 +3,13 @@
 ## Variable
 Création d'une variable :
 
-```Bash 
+```bash 
 declare name_of_variable="content_of_variable"
 ```
 
 Quand il y a une manipulation de variable ne pas oublier le `$` expl : 
 
-```Bash
+```bash
 echo "$Variable1"
 ```
 
@@ -22,7 +22,7 @@ Il n'y a pas de types de variables (int, float, char, ...) n'existent passer
 
 Suivant la structure : 
 
-```Bash
+```bash
 if [[<condition>]]; then 
     echo "test"
 else
@@ -33,14 +33,14 @@ fi
 
 Pour verifier si une variable est vide mettre en condition 
 
-```Bash
-if [[-z "$variable"]];
+```bash
+if [[ -z "$variable" ]];
 ```
 
 Le caractère `!` permet d'inverser la condition
 
-```Bash
-if ! [[ -z "$variable"]]; then
+```bash
+if ! [[ -z "$variable" ]]; then
     echo "votre variable n'est pas vide"
     exit 0
 fi
@@ -54,14 +54,14 @@ Pour passer d'un flux standard à un flux d'erreur standard utiliser l'otpion `>
 Pour passer d'un flux d'erreur standaed à un flux standard utiliser l'option `2>&1` 
 
 Pour faire une concaténation de variable utiliser l'opérateur `.` exemple : 
-```Bash
+```bash
 declare $var1.var2
 
 ```
 > Pour un simple `echo` pas besoin de `.`
 
 `$` est un caractère reservé ne pas oublier de mettre un `\` devant lors que l'on veut l'affecter à une variable exemple : 
-```Bash
+```bash
 echo "Je possède 1000\$ sur mon compte en banque"
 declare test="j'ai 300\$ sur moi"
 
@@ -73,7 +73,7 @@ Il existe 2 types de boucles en Bash
 
 ### La boucle `while`
 
-```Bash
+```bash
 i=1
 while [[$i -le 5]];
 do 
@@ -87,7 +87,7 @@ done
 
 ### La boucle `for`
 
-```Bash
+```bash
 for ((i = 0; i < 5; i++)); 
 do 
     echo $i
@@ -105,20 +105,20 @@ Exemple de paramètre `./EX1.sh hugo`
 
 Pour afficher le nombre de variables passée en paramètres 
 
-```Bash
+```bash
 echo $#
 ```
 
 l'affichage des paramètre se fait grace à : 
 
-```Bash
+```bash
 echo $1
 
 ```
 
 Attenttion il est toujours pas mal de vérifier si le nombre de paramètres entré n'est pas suppérieur ou inférieur à ceux demandé
 
-```Bash
+```bash
 if [[ "$#" -ne 1]]; then
     echo "Le nombre de paramètre ne correspond pas"
     exit 1
@@ -131,7 +131,7 @@ on peu aproximativement passer tout en paramètres nom de fichier, int, char (po
 
 ## Les options
 
-```Bash
+```bash
 #!/bin/bash
 
 while getopts "$options" option; do 
@@ -174,12 +174,12 @@ pour les opératuers de bases
 
 Toujours tester la présence de celui-ci avant de commencer afin de ne pas créer de problème
 
-```Bash
+```bash
 #!/bin/bash
 
 declare file_name="./test.txt"
 
-if ! [[ -f "$file_name"]]; then
+if ! [[ -f "$file_name" ]]; then
     echo "File not find"
     exit 1
 fi
@@ -187,5 +187,3 @@ fi
 ```
 > Ici le fichier test.txt devrait se trouver dans le même  dossier que notre programme 
 
-
-## Les options
