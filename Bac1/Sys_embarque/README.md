@@ -1,6 +1,6 @@
 # Arduino
 
-#Code EX1
+## Code EX1
 
 Pour cet Ex il faut connecter 2 boutons et 2 leds chacun des boutons gère une seule led
 >Relier le coté le plus grand (+) à un port de l'Arduino le plus petit (-) à la ligne négative de la breadboard.
