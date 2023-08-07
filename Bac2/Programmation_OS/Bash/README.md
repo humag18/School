@@ -3,17 +3,22 @@
 ## Variable
 Création d'une variable :
 
-```bash 
+```shel 
 declare name_of_variable="content_of_variable"
 ```
 
 Quand il y a une manipulation de variable ne pas oublier le `$` expl : 
 
-```bash
+```shell
 echo "$Variable1"
 ```
 
 Il n'y a pas de types de variables (int, float, char, ...) n'existent passer
+
+Pour faire une oppération sur une variable :
+```shell
+variable=$((variable+1))
+```
 
 >Les listes n'existent pas non plus mais il y a moyen d'en simulé avec un remplacement des espaces par des \n
 >/!\ATTENTION/!\ le premier élément d'une variable et le n°1 et non n°0 
