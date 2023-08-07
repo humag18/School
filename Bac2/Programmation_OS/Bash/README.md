@@ -3,7 +3,7 @@
 ## Variable
 Création d'une variable :
 
-```shel 
+```shell
 declare name_of_variable="content_of_variable"
 ```
 
@@ -27,7 +27,7 @@ variable=$((variable+1))
 
 Suivant la structure : 
 
-```bash
+```shell
 if [[<condition>]]; then 
     echo "test"
 else
